@@ -5,12 +5,12 @@ import "./Card.css";
 const CarCard = ({ car, onDelete, onEdit }) => {
   return (
     <div className="col-md-3 col-xs-12" style={{ height: "100%" }}>
-      <Card style={{ width: "35rem" }}>
+      <Card style={{ width: "35rem", height: "75%" }}>
         <Card.Img
           variant="top"
           src={`http://localhost:8800${car.imageURL}`}
           alt={car.brand}
-          className="image-fluid"
+          style={{ objectFit: "cover", height: "150px" }}
         />
         <Card.Body style={{ alignItems: "center" }}>
           <Card.Title>{car.brand}</Card.Title>

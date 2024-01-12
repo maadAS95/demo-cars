@@ -14,7 +14,6 @@ export const EditCar = ({ car }) => {
   const [image, setImage] = useState(car.imageURL);
   const [year, setYear] = useState(car.year);
   const [price, setPrice] = useState(car.price);
-  console.log(image, "iiiiiimm");
   const handleFileUpload = (files) => {
     if (files.length) setImage(files);
   };

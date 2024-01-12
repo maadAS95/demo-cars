@@ -45,25 +45,6 @@ const listCars = async (limit, offset) => {
     };
   }
 };
-const searchCars = async (param) => {
-  try {
-    const query = createQueryParams(param);
-    console.log(query, "querySearch");
-    const cars = await Car.find(query, { __v: 0 });
-    return {
-      status: 200,
-      message: "success",
-      data: cars,
-    };
-  } catch (error) {
-    console.error("error searching..", error);
-    return {
-      status: 500,
-      message: "failed",
-      data: [],
-    };
-  }
-};
 
 const updateCar = async (car, withFile) => {
   try {
@@ -148,7 +129,7 @@ const getCar = async (carId) => {
 module.exports = {
   addNewCar,
   listCars,
-  searchCars,
+
   updateCar,
   deleteCar,
   getCar,
